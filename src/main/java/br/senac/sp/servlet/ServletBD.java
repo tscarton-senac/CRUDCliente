@@ -52,6 +52,7 @@ public class ServletBD extends HttpServlet {
             List<Cliente> listaClientes = ClienteDAO.getClientes();
             for(Cliente cliente: listaClientes) {
                 out.println(cliente);
+                out.println("<br/>");
             }
             
             out.println("</body>");

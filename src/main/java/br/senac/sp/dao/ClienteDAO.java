@@ -45,5 +45,15 @@ public class ClienteDAO {
         }
         return listaClientes;
     }
+    
+    public static void addCliente(Cliente cliente) throws SQLException, ClassNotFoundException {
+        Connection con = ConexaoDB.getConexao();
+        String query = "insert into cliente(nome, email, cpf) values (?,?,?)";
+        PreparedStatement ps = con.prepareStatement(query);
+        ps.setString(1, cliente.getNome());
+        ps.setString(2, cliente.getEmail());
+        ps.setLong(3, cliente.getCpf());
+        ps.execute();
+    }
 
 }

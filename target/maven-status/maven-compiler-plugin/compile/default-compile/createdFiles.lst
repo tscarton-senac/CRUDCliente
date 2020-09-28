@@ -1,2 +1,4 @@
+br/senac/sp/entidade/Cliente.class
 br/senac/sp/servlet/ServletBD.class
+br/senac/sp/dao/ClienteDAO.class
 br/senac/sp/bd/ConexaoDB.class
