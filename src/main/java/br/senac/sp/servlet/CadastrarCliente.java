@@ -7,6 +7,7 @@ package br.senac.sp.servlet;
 
 import br.senac.sp.dao.ClienteDAO;
 import br.senac.sp.entidade.Cliente;
+import br.senac.sp.utils.Utils;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -38,11 +39,7 @@ public class CadastrarCliente extends HttpServlet {
             response.sendRedirect("sucesso.jsp");
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(CadastrarCliente.class.getName()).log(Level.SEVERE, null, ex);
-            String msgErro = ex.getMessage();
-            request.setAttribute("msgErro", msgErro);
-            RequestDispatcher requestDispatcher = getServletContext()
-                 .getRequestDispatcher("/erro.jsp");
-            requestDispatcher.forward(request, response);
+            Utils.mostrarTelaErro(ex, request, response);
         }
     }
 

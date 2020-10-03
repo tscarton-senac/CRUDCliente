@@ -1,6 +1,6 @@
 <%-- 
-    Document   : erro
-    Created on : Sep 25, 2020, 9:38:44 PM
+    Document   : paginaNaoEncontrada
+    Created on : Oct 2, 2020, 7:43:59 PM
     Author     : tscarton
 --%>
 
@@ -10,13 +10,9 @@
     <%@include file="header.jsp" %>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Erro!</title>
+        <title>Erro 404</title>
     </head>
     <body>
-        <h1>Erro!</h1>
-        <br/>
-        ${msgErro}
-        <br/>
-        <a href="index.jsp">Voltar</a>
+        <h1>Página não encontrada!</h1>
     </body>
 </html>
