@@ -1,6 +1,14 @@
 /Users/tscarton/Scarton/Senac/PI3/workspace/CRUDCliente/src/main/java/br/senac/sp/dao/ClienteDAO.java
+/Users/tscarton/Scarton/Senac/PI3/workspace/CRUDCliente/src/main/java/br/senac/sp/entidade/Usuario.java
+/Users/tscarton/Scarton/Senac/PI3/workspace/CRUDCliente/src/main/java/br/senac/sp/dao/UsuarioDAO.java
 /Users/tscarton/Scarton/Senac/PI3/workspace/CRUDCliente/src/main/java/br/senac/sp/servlet/ServletBD.java
-/Users/tscarton/Scarton/Senac/PI3/workspace/CRUDCliente/src/main/java/br/senac/sp/servlet/ListarClientes.java
-/Users/tscarton/Scarton/Senac/PI3/workspace/CRUDCliente/src/main/java/br/senac/sp/servlet/CadastrarCliente.java
+/Users/tscarton/Scarton/Senac/PI3/workspace/CRUDCliente/src/main/java/br/senac/sp/servlet/AlterarCliente.java
+/Users/tscarton/Scarton/Senac/PI3/workspace/CRUDCliente/src/main/java/br/senac/sp/servlet/LoginServlet.java
 /Users/tscarton/Scarton/Senac/PI3/workspace/CRUDCliente/src/main/java/br/senac/sp/entidade/Cliente.java
 /Users/tscarton/Scarton/Senac/PI3/workspace/CRUDCliente/src/main/java/br/senac/sp/bd/ConexaoDB.java
+/Users/tscarton/Scarton/Senac/PI3/workspace/CRUDCliente/src/main/java/br/senac/sp/utils/Utils.java
+/Users/tscarton/Scarton/Senac/PI3/workspace/CRUDCliente/src/main/java/br/senac/sp/servlet/LogoutServlet.java
+/Users/tscarton/Scarton/Senac/PI3/workspace/CRUDCliente/src/main/java/br/senac/sp/servlet/ListarClientes.java
+/Users/tscarton/Scarton/Senac/PI3/workspace/CRUDCliente/src/main/java/br/senac/sp/filter/AutorizacaoFilter.java
+/Users/tscarton/Scarton/Senac/PI3/workspace/CRUDCliente/src/main/java/br/senac/sp/servlet/CadastrarCliente.java
+/Users/tscarton/Scarton/Senac/PI3/workspace/CRUDCliente/src/main/java/br/senac/sp/servlet/ExcluirCliente.java

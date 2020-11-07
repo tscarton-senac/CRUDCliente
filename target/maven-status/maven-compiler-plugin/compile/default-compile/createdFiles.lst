@@ -1,4 +1,14 @@
-br/senac/sp/entidade/Cliente.class
-br/senac/sp/servlet/ServletBD.class
+br/senac/sp/servlet/CadastrarCliente.class
 br/senac/sp/dao/ClienteDAO.class
+br/senac/sp/servlet/ExcluirCliente.class
 br/senac/sp/bd/ConexaoDB.class
+br/senac/sp/servlet/LogoutServlet.class
+br/senac/sp/dao/UsuarioDAO.class
+br/senac/sp/entidade/Usuario.class
+br/senac/sp/servlet/LoginServlet.class
+br/senac/sp/utils/Utils.class
+br/senac/sp/entidade/Cliente.class
+br/senac/sp/filter/AutorizacaoFilter.class
+br/senac/sp/servlet/ServletBD.class
+br/senac/sp/servlet/ListarClientes.class
+br/senac/sp/servlet/AlterarCliente.class
