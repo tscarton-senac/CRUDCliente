@@ -16,7 +16,7 @@
     <body>
         <h1>Menu</h1>
         <h2>Bem vindo, ${sessionScope.usuario.nome}</h2>
-        <a href="<c:url value="/ListarClientes"/>">Listar Clientes</a><br/>
+        <a href="<c:url value="/protegido/ListarClientes"/>">Listar Clientes</a><br/>
         <c:if test="${sessionScope.usuario.admin}">
             <a href="admin/cadastrarCliente.jsp">Cadastrar Clientes</a>
         </c:if>
@@ -24,5 +24,14 @@
         <br/>
         <br/>
         <a href="<c:url value="/LogoutServlet"/>">Sair</a>
+        <br/>
+        <br/>
+        <c:if test="${sessionScope.listaClientes != null}">
+            <h2>Clientes salvos na sessão</h2>
+            <c:forEach items="${sessionScope.listaClientes}" var="cliente">
+                <span>${cliente}</span><br/>
+            </c:forEach> 
+        </c:if>
+        
     </body>
 </html>

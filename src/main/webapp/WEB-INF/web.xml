@@ -36,6 +36,10 @@
         <servlet-name>LogoutServlet</servlet-name>
         <servlet-class>br.senac.sp.servlet.LogoutServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CarrinhoServlet</servlet-name>
+        <servlet-class>br.senac.sp.servlet.CarrinhoServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletBD</servlet-name>
         <url-pattern>/ServletBD</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>LogoutServlet</servlet-name>
         <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CarrinhoServlet</servlet-name>
+        <url-pattern>/CarrinhoServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

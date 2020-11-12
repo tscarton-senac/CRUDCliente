@@ -27,6 +27,33 @@ public class Cliente {
         return String.format("Nome %s <br/> Email %s <br/> CPF %d" , 
                 this.getNome(), this.getEmail(), this.getCpf());
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 97 * hash + (int) (this.cpf ^ (this.cpf >>> 32));
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Cliente other = (Cliente) obj;
+        if (this.cpf != other.cpf) {
+            return false;
+        }
+        return true;
+    }
+    
+    
     
     
 }

@@ -4,6 +4,7 @@
     Author     : tscarton
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,7 +15,7 @@
     </head>
     <body class="container">
         <h1>Cadastro</h1>
-        <form action="CadastrarCliente" method="POST">
+        <form action="<c:url value="/CadastrarCliente"/>" method="POST">
             <p>Nome</p>
             <input name="nome" class="form-control" required="true"/><br/>
             <p>Email</p>

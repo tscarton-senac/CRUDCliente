@@ -1,10 +1,13 @@
+br/senac/sp/servlet/CarrinhoServlet.class
 br/senac/sp/servlet/CadastrarCliente.class
+br/senac/sp/servlet/TesteSeguranca.class
 br/senac/sp/dao/ClienteDAO.class
 br/senac/sp/servlet/ExcluirCliente.class
 br/senac/sp/bd/ConexaoDB.class
 br/senac/sp/servlet/LogoutServlet.class
 br/senac/sp/dao/UsuarioDAO.class
 br/senac/sp/entidade/Usuario.class
+NewClass.class
 br/senac/sp/servlet/LoginServlet.class
 br/senac/sp/utils/Utils.class
 br/senac/sp/entidade/Cliente.class

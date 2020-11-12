@@ -4,6 +4,7 @@
     Author     : tscarton
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,6 +15,6 @@
     </head>
     <body>
         <h1>Operação executada com sucesso!</h1><br/>
-        <a href="index.jsp">Voltar</a>
+        <a href="<c:url value="/protegido/index.jsp"/>">Voltar</a>
     </body>
 </html>

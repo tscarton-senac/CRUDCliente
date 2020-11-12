@@ -15,6 +15,12 @@
         
         <script lang="text/javascript">
             
+            function adicionarClienteNaSessao(cpf){
+                $.get( "CarrinhoServlet?cpf="+cpf, function( resposta ) {
+                    $('.toast').toast('show');
+                });
+            }
+            
             function mostrarModalExclusao(cpf, nome){
                 $("#nomeCliente").html(nome);
                 $("#cpfCliente").val(cpf);
@@ -36,6 +42,11 @@
         </script>
     </head>
     <body class="container">
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="1000">
+            <div class="toast-body">
+              Cliente adicionado com sucesso!
+            </div>
+          </div>
         <h1>Lista de Clientes</h1>
         <table class="table">
             <thead>
@@ -50,13 +61,17 @@
                         <td>${cliente.email}</td>
                         <td>${cliente.cpf}</td>
                         <td><a href="AlterarCliente?cpf=${cliente.cpf}">Alterar</a></td>
-                        <td><button type="button" class="btn btn-primary" onclick="mostrarModalExclusao(${cliente.cpf}, '${cliente.nome}')">Excluir</button></td>
+                        <td><button type="button" class="btn btn-primary" 
+                                    onclick="mostrarModalExclusao(${cliente.cpf}, '${cliente.nome}')">Excluir</button></td>
+                        <td><button type="button" class="btn btn-primary" 
+                                    onclick="adicionarClienteNaSessao(${cliente.cpf})">Salvar</button></td>
                     </tr>
                 </c:forEach>
                 
             </tbody>
             
         </table>
+        
         <div class="modal fade" id="modalExclusao" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
