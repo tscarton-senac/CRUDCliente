@@ -2,89 +2,57 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <filter>
         <filter-name>AutorizacaoFilter</filter-name>
-        <filter-class>br.senac.sp.filter.AutorizacaoFilter</filter-class>
+        <filter-class>br.senac.conexaobd.filter.AutorizacaoFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>AutorizacaoFilter</filter-name>
         <url-pattern>/protegido/*</url-pattern>
     </filter-mapping>
     <servlet>
-        <servlet-name>ServletBD</servlet-name>
-        <servlet-class>br.senac.sp.servlet.ServletBD</servlet-class>
+        <servlet-name>ClienteServlet</servlet-name>
+        <servlet-class>br.senac.conexaobd.servlet.ClienteServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ListarClientes</servlet-name>
-        <servlet-class>br.senac.sp.servlet.ListarClientes</servlet-class>
+        <servlet-name>CadastroClienteServlet</servlet-name>
+        <servlet-class>br.senac.conexaobd.servlet.CadastroClienteServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>CadastrarCliente</servlet-name>
-        <servlet-class>br.senac.sp.servlet.CadastrarCliente</servlet-class>
+        <servlet-name>ListarClienteServlet</servlet-name>
+        <servlet-class>br.senac.conexaobd.servlet.ListarClienteServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>AlterarCliente</servlet-name>
-        <servlet-class>br.senac.sp.servlet.AlterarCliente</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ExcluirCliente</servlet-name>
-        <servlet-class>br.senac.sp.servlet.ExcluirCliente</servlet-class>
+        <servlet-name>BuscaCliente</servlet-name>
+        <servlet-class>br.senac.conexaobd.servlet.BuscaCliente</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>br.senac.sp.servlet.LoginServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>LogoutServlet</servlet-name>
-        <servlet-class>br.senac.sp.servlet.LogoutServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>CarrinhoServlet</servlet-name>
-        <servlet-class>br.senac.sp.servlet.CarrinhoServlet</servlet-class>
+        <servlet-class>br.senac.conexaobd.servlet.LoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ServletBD</servlet-name>
-        <url-pattern>/ServletBD</url-pattern>
+        <servlet-name>ClienteServlet</servlet-name>
+        <url-pattern>/ClienteServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ListarClientes</servlet-name>
-        <url-pattern>/ListarClientes</url-pattern>
+        <servlet-name>CadastroClienteServlet</servlet-name>
+        <url-pattern>/protegido/cliente/CadastroClienteServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>CadastrarCliente</servlet-name>
-        <url-pattern>/CadastrarCliente</url-pattern>
+        <servlet-name>ListarClienteServlet</servlet-name>
+        <url-pattern>/cliente/ListarClienteServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>AlterarCliente</servlet-name>
-        <url-pattern>/AlterarCliente</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ExcluirCliente</servlet-name>
-        <url-pattern>/ExcluirCliente</url-pattern>
+        <servlet-name>BuscaCliente</servlet-name>
+        <url-pattern>/cliente/BuscaCliente</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>LogoutServlet</servlet-name>
-        <url-pattern>/LogoutServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>CarrinhoServlet</servlet-name>
-        <url-pattern>/CarrinhoServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
-    <error-page>
-        <error-code>404</error-code>
-        <location>/paginaNaoEncontrada.jsp</location>
-    </error-page>
-    <error-page>
-        <error-code>403</error-code>
-        <location>/acessoProibido.jsp</location>
-    </error-page>
     <welcome-file-list>
         <welcome-file>protegido/index.jsp</welcome-file>
     </welcome-file-list>

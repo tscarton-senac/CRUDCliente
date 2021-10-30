@@ -1,38 +1,33 @@
 <%-- 
     Document   : login
-    Created on : Nov 6, 2020, 8:29:21 PM
-    Author     : tscarton
+    Created on : 29/10/2021, 19:24:46
+    Author     : tiago.bscarton
 --%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+         <link href="${pageContext.request.contextPath}/lib/bootstrap-4.1.3-dist/css/bootstrap.min.css"
+              rel="stylesheet" type="text/css"/>
     </head>
-    <%@include file="header.jsp" %>
     <body class="container">
-        <h1>Login</h1>
-        <c:if test="${param.erro != null}">
-           <div class="alert alert-danger" role="alert">
-            Usuário/Senha inválidos!
-           </div>
-        </c:if>
-        
+        <h1>Formulário de Login</h1>
         <form action="LoginServlet" method="POST">
             <div class="form-group">
-            <label>Login</label>
-            <input name="login" class="form-control" required/>
-            </div>
-            <div class="form-group">
-                <label>Senha</label>
-                <input type="password" name="senha" class="form-control" required/>
-            </div>
+                <label for="nomeUsuario">Usuário</label>
+                <input type="text" class="form-control" id="nomeUsuario" name="nomeUsuario" >
+              </div>
+              <div class="form-group">
+                <label for="senhaUsuario">Password</label>
+                <input type="password" class="form-control" id="senhaUsuario" name="senhaUsuario" >
+              </div>
+            
             <button type="submit" class="btn btn-primary">Enviar</button>
+            
         </form>
-        
-        
+
     </body>
 </html>
