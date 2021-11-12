@@ -7,6 +7,7 @@ package br.senac.conexaobd.servlet;
 
 import br.senac.conexaobd.dao.UsuarioDAO;
 import br.senac.conexaobd.entidades.Usuario;
+import br.senac.conexaobd.uteis.CryptoUtils;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -38,13 +39,18 @@ public class LoginServlet extends HttpServlet {
        String nomeUsuario = request.getParameter("nomeUsuario");
        String senhaUsuario = request.getParameter("senhaUsuario");
        
-        Usuario usuario = UsuarioDAO.getUsuario(nomeUsuario, senhaUsuario);
+        Usuario usuario = UsuarioDAO.getUsuario(nomeUsuario);
         if (usuario == null) {
-            
+            response.sendRedirect(request.getContextPath()+"/login.jsp?loginInvalido=true");
         } else {
-            HttpSession sessao = request.getSession();
-            sessao.setAttribute("usuario", usuario);
-            response.sendRedirect(request.getContextPath()+"/protegido/index.jsp");
+            boolean senhaOK = CryptoUtils.verificarSenha(senhaUsuario, usuario.getSenha());
+            if (senhaOK) {
+                HttpSession sessao = request.getSession();
+                sessao.setAttribute("usuario", usuario);
+                response.sendRedirect(request.getContextPath()+"/protegido/index.jsp");
+            } else {
+                response.sendRedirect(request.getContextPath()+"/login.jsp?loginInvalido=true");
+            }
         }
     }
 

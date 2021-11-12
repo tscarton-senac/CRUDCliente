@@ -8,5 +8,5 @@ CREATE TABLE usuario (
    perfil VARCHAR(255)
 );
 
-insert into usuario (nome, usuario, senha, perfil) values  ('Administrator', 'admin', '1234', 'admin');
-insert into usuario (nome, usuario, senha, perfil) values  ('Mike Wilson', 'mike', '1234', 'vendedor');
+insert into usuario (nome, usuario, senha, perfil) values  ('Administrator', 'admin', '$2a$08$JlzFPOTbpuepNSRbZo92wOMPMUBC3TabUWfrKTPTfiWR.LvM46LzK', 'admin');
+insert into usuario (nome, usuario, senha, perfil) values  ('Mike Wilson', 'mike', '$2a$08$JlzFPOTbpuepNSRbZo92wOMPMUBC3TabUWfrKTPTfiWR.LvM46LzK', 'vendedor');

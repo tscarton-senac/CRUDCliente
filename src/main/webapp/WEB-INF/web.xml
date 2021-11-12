@@ -38,7 +38,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ListarClienteServlet</servlet-name>
-        <url-pattern>/cliente/ListarClienteServlet</url-pattern>
+        <url-pattern>/protegido/cliente/ListarClienteServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>BuscaCliente</servlet-name>

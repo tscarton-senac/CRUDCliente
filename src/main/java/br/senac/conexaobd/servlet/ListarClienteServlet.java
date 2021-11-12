@@ -31,7 +31,7 @@ public class ListarClienteServlet extends HttpServlet {
         request.setAttribute("listaClientes", clientes);
         
         // RequestDispatcher reaproveita os objetos Request e Response
-        String url = "/cliente/listar.jsp";
+        String url = "/protegido/cliente/listar.jsp";
         request.getRequestDispatcher(url).forward(request, response);
         
         //sendRedirect sempre cria um novo request/response

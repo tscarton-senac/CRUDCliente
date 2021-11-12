@@ -48,7 +48,7 @@
         </script>
     </head>
     <body class="container">
-        <c:import url="../uteis/header.jsp"/>
+        <c:import url="../../uteis/header.jsp"/>
         <div id="alerta" class="alert alert-success" role="alert" style="display:none">
            Cliente removido com sucesso!
         </div>
@@ -90,5 +90,5 @@
     </table>
 
 </body>
-<a href="${pageContext.request.contextPath}/index.jsp">Voltar</a>
+<a href="${pageContext.request.contextPath}/protegido/index.jsp">Voltar</a>
 </html>

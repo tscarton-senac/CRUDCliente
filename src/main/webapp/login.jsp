@@ -4,6 +4,7 @@
     Author     : tiago.bscarton
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,6 +16,12 @@
     </head>
     <body class="container">
         <h1>Formulário de Login</h1>
+        
+        <c:if test="${param.loginInvalido != null}">
+            <div class="alert alert-danger" role="alert">
+                Usuário/Senha inválidos
+            </div>
+        </c:if>
         <form action="LoginServlet" method="POST">
             <div class="form-group">
                 <label for="nomeUsuario">Usuário</label>
